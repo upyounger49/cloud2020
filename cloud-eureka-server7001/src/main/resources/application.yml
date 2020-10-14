@@ -7,9 +7,9 @@ eureka:
     #hostname: localhost #eureka 服务的端的实例名称（单机）
   client:
     #表示不向服务中心注册自己
-    register-with-eureka: false
+    register-with-eureka: true
     #维护服务实例 不进行检索服务
-    fetch-registry: false
+    fetch-registry: true
     service-url:
       defaultZone: http://eureka7002.com:7002/eureka #集群版 相互注册 7001注册7002
       # 设置与Eureka Server交互的地址 查询服务和注册服务都需要这个地址

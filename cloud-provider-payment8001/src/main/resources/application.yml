@@ -27,9 +27,9 @@ eureka:
     register-with-eureka: true
     #是否从EurekaServer抓取已有的注册信息 默认为true
     fetch-registry: true
-    eureka-server-connect-timeout-seconds:
-    eureka-server-d-n-s-name:
-    eureka-server-port:
+#    eureka-server-connect-timeout-seconds:
+#    eureka-server-d-n-s-name:
+#    eureka-server-port:
   #主机规范名称 在注册中心服务的名称
   instance:
     instance-id: payment8001
