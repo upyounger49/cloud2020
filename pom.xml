@@ -17,6 +17,7 @@
       <module>cloud-provider-payment8004</module>
       <module>cloud-providerconsul-payment8006</module>
       <module>cloud-consumer-feign-order80</module>
+      <module>cloud-provider-hystrix-payment8001</module>
   </modules>
   <packaging>pom</packaging><!-- 代表这是一个pom 总的父工程-->
 
