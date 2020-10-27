@@ -58,6 +58,11 @@ public class PaymentController {
         }
     }
 
+    @GetMapping("/payment/lb")
+    public CommonResult getPort(){
+        return new CommonResult(200,"查询成功！",serverPort);
+    }
+
     /**
      * 获取微服务的详细信息
      * @return

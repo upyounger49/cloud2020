@@ -12,13 +12,17 @@
     <module>cloud-consumer-order80</module>
       <module>cloud-api-commons</module>
     <module>cloud-eureka-server7001</module>
-    <module>cloud-eureka-server700</module>
+    <module>cloud-eureka-server7002</module>
       <module>cloud-provider-payment8002</module>
       <module>cloud-provider-payment8004</module>
-      <module>cloud-providerconsul-payment8006</module>
+      <module>cloud-provider-consul-payment8006</module>
       <module>cloud-consumer-feign-order80</module>
       <module>cloud-provider-hystrix-payment8001</module>
       <module>cloud-consumer-hystrix-dashboard9001</module>
+      <module>cloud-gateway-gateway9527</module>
+      <module>cloud-stream-rabbitmq-provider8801</module>
+      <module>cloud-stream-rabbitmq-consumer8802</module>
+      <module>cloud-stream-rabbitmq-consumer8803</module>
   </modules>
   <packaging>pom</packaging><!-- 代表这是一个pom 总的父工程-->
 
@@ -80,6 +84,16 @@
         <groupId>org.mybatis.spring.boot</groupId>
         <artifactId>mybatis-spring-boot-starter</artifactId>
         <version>${mybatis.spring.boot.version}</version>
+      </dependency>
+
+
+      <!--
+      Spring Boot 2.2.3 修复了 Spring Boot 2.2的大量问题，当升级至 2.2.3 以后，直接翻车 pigx-gateway 网关应用直接启动不起来。
+      为了 兼容 gateway全局使用 0.9.4 暂时是 快照版本，或者降级到 0.9.2 ，Spring Boot 2.2.3 未修改reactor 问题，降级是目前最好的选择。-->
+      <dependency>
+        <groupId>io.projectreactor.netty</groupId>
+        <artifactId>reactor-netty</artifactId>
+        <version>0.9.2.RELEASE</version>
       </dependency>
 
     </dependencies>
